@@ -26,6 +26,7 @@ namespace CSharpSixSamples
 
     public class IndexedMembers
     {
+        // CUT!!!!
         // Yet another thing that will hopefully work by RTM
         //public void NowWithSimplerSyntax()
         //{

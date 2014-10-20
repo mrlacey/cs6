@@ -10,7 +10,7 @@ namespace CSharpSixSamples
 
             string postcode = "not set";
 
-            if (cust.Address != null && cust.Address.Postcode != null)
+            if (cust != null && cust.Address != null && cust.Address.Postcode != null)
             {
                 postcode = cust.Address.Postcode;
             }

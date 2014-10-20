@@ -25,12 +25,27 @@ namespace CSharpSixSamples
             // async/await, caller info attributes
 
             // 6.0 - 2014
-            // Roslyn + lots of lovely syntax improvements
+            // Roslyn + some syntax improvements
+
+// http://roslyn.codeplex.com/wikipage?title=Language%20Feature%20Status&referringTitle=Documentation
+
+// http://roslyn.codeplex.com/discussions/568820
+
+
+
+// New language features
+// solves a real problem AND better than a current work around
+
+
 
             // Because we're using new features, in the CTP, we need to modify the .csproj file
             // to set the LangVersion to be "experimental"
             // This is done on  per configuration basis.
             // I've only enabled it for Debug, so if you switch to Release you'll see errors
+
+
+// #pragma changes
+// String interpolation is "PLANNED"
 
 
             var nameof = new NameOfExpressions();

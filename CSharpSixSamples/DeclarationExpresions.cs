@@ -3,6 +3,7 @@ using System;
 
 namespace CSharpSixSamples
 {
+    // CUT!!!
     public class DeclarationExpresions
     {
         public int OldWay()

@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 namespace CSharpSixSamples
 {
+    // Primary constructors are out!
+    // Auto prop initializers are in
+    // Getter only auto-props are in
+    // Settings getter only auto props in ctor is in (but not in CTP)
     public class OldPrimaryConstructor
     {
         public OldPrimaryConstructor(string someProperty)
