@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CSharpSixSamples
 {
@@ -43,6 +44,25 @@ namespace CSharpSixSamples
 
             Console.WriteLine(postcode);
         }
+
+        public void AsSingleLine()
+        {
+            Console.WriteLine(GetCustomer()?.Address?.Postcode ?? "not set");
+        }
+
+        public void OnIndexersToo()
+        {
+            var orderAmounts = new Dictionary<int, double>();
+            orderAmounts.Add(1, 12.99);
+            orderAmounts.Add(2, 2.99);
+            orderAmounts.Add(3, 100.99);
+            orderAmounts.Add(4, 7.49);
+
+            Console.WriteLine(orderAmounts?[2].ToString() ?? "unknown order");
+            Console.WriteLine(orderAmounts?[7].ToString() ?? "unknown order");
+        }
+
+
 
 
         private Customer GetCustomer()

@@ -27,14 +27,14 @@ namespace CSharpSixSamples
             // 6.0 - 2014
             // Roslyn + some syntax improvements
 
-// http://roslyn.codeplex.com/wikipage?title=Language%20Feature%20Status&referringTitle=Documentation
+            // http://roslyn.codeplex.com/wikipage?title=Language%20Feature%20Status
 
-// http://roslyn.codeplex.com/discussions/568820
+            // http://roslyn.codeplex.com/discussions/568820
 
 
 
-// New language features
-// solves a real problem AND better than a current work around
+            // New language features
+            // solves a real problem AND better than a current work around
 
 
 
@@ -44,15 +44,34 @@ namespace CSharpSixSamples
             // I've only enabled it for Debug, so if you switch to Release you'll see errors
 
 
-// #pragma changes
-// String interpolation is "PLANNED"
+            // #pragma changes
+            // String interpolation is "PLANNED"
 
+            // Auto-property enhancements
+            // Expression bodied members
+            // using Static
+            // Await in catch and finally blocks
+            // Exception filters
+            // NameOf expressions
+            // Null Propogation operator (AKA Null-conditional)
+            // Element and Index Initializers
 
+            // string interpolation - PLANNED
+
+            SetOutputHeading("'nameof' expressions");
+            
             var nameof = new NameOfExpressions();
             nameof.ShowWhatCanNowBeDone("something");
 
 
             Console.ReadKey(true);
+        }
+
+        private static void SetOutputHeading(string heading)
+        {
+            Console.WriteLine("");
+            Console.WriteLine(heading);
+            Console.WriteLine("---------------------------------");
         }
     }
 }

@@ -1,9 +1,18 @@
-﻿
+﻿using System.Collections.Generic;
+
 namespace CSharpSixSamples
 {
     public class ElementInitializers
     {
-        public void OldWayFoDictionaries()
+        public void LongHand()
+        {
+            var myDic = new Dictionary<string, string>();
+            myDic.Add("reaction", "Woo!");
+            myDic.Add("response", "Yeah!");
+            myDic.Add("opinion", "These features are amazing!");
+        }
+
+        public void ShortHand()
         {
             var myDic = new Dictionary<string, string>
             {
@@ -13,7 +22,7 @@ namespace CSharpSixSamples
             };
         }
 
-        public void NowWithSimplerSyntax()
+        public void EvenShorterHand()
         {
             var myDic = new Dictionary<string, string>
             {
@@ -23,22 +32,4 @@ namespace CSharpSixSamples
             };
         }
     }
-
-    public class IndexedMembers
-    {
-        // CUT!!!!
-        // Yet another thing that will hopefully work by RTM
-        //public void NowWithSimplerSyntax()
-        //{
-        //    var myDic = new Dictionary<string, string>
-        //    {
-        //        $Reaction = "Woo!",
-        //        $Response=  "Yeah!",
-        //        $Opinion = "These features are amazing!"
-        //    };
-
-        //    Console.WriteLine(myDic.$reaction);
-        //}
-    }
-
 }

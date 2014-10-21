@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConstructorsAndPropertyInitializers.cs" />
+    <Compile Include="AutoPropertyInitializers.cs" />
     <Compile Include="DeclarationExpresions.cs" />
     <Compile Include="ElementInitializers.cs" />
     <Compile Include="EventInitializers.cs" />

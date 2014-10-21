@@ -1,4 +1,4 @@
-﻿using System;;
+﻿using System;
 using System.Threading.Tasks;
 
 namespace CSharpSixSamples
@@ -13,10 +13,12 @@ namespace CSharpSixSamples
             }
             catch (Exception exc)
             {
+                // If we couldn't await here we'd have to set a flag and then make the call after the finally
                 await LogExceptionAsync(exc);
             }
             finally
             {
+                // If we couldn't await here we'd need a second suppressing exception handler and then make the call after that
                 await DoSomethingFinal();
             }
         }
@@ -54,11 +56,15 @@ namespace CSharpSixSamples
             }
             catch (CustomException cex)
             {
-                Console.WriteLine("A custom exception");
+                Console.WriteLine("A custom exception: " + cex);
+            }
+            catch (Exception ecx) if (ecx.Message.Contains("FATAL"))
+            {
+                Console.WriteLine("Some FATAL error occurred: " + ecx);
             }
             catch (Exception ecx)
             {
-                Console.WriteLine("Some error occurred");
+                Console.WriteLine("Some error occurred: " + ecx);
             }
         }
 
