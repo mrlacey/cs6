@@ -43,7 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoPropertyInitializers.cs" />
-    <Compile Include="DeclarationExpresions.cs" />
     <Compile Include="ElementInitializers.cs" />
     <Compile Include="EventInitializers.cs" />
     <Compile Include="ExceptionHandlingImprovements.cs" />
