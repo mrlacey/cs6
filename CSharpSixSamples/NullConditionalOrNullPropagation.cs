@@ -59,6 +59,8 @@ namespace CSharpSixSamples
             orderAmounts.Add(4, 7.49);
 
             Console.WriteLine(orderAmounts?[2].ToString() ?? "unknown order");
+
+            // Still throws in Preview - hopefully still coming
             Console.WriteLine(orderAmounts?[7].ToString() ?? "unknown order");
         }
 

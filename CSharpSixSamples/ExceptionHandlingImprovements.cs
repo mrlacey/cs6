@@ -13,12 +13,14 @@ namespace CSharpSixSamples
             }
             catch (Exception exc)
             {
-                // If we couldn't await here we'd have to set a flag and then make the call after the finally
+                // If we couldn't await here we'd have to set a flag
+                // and then make the call after the finally
                 await LogExceptionAsync(exc);
             }
             finally
             {
-                // If we couldn't await here we'd need a second suppressing exception handler and then make the call after that
+                // If we couldn't await here we'd probably need a second 
+                // suppressing exception handler and then make the call after that
                 await DoSomethingFinal();
             }
         }
@@ -81,5 +83,4 @@ namespace CSharpSixSamples
             }
         }
     }
-
 }

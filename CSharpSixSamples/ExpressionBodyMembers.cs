@@ -35,7 +35,7 @@ namespace CSharpSixSamples
         public string this[int id] => MyList[id];
 
         // Like a single line method
-        public int GrowAreaByPercentage(int percentage) => Area * (100 / 100 + percentage);
+        public float GrowAreaByPercentage(int percentage) => ((float)Area / 100) * (100 + percentage);
 
         // Can be used for methods that return void
         public void WriteToLog() => Console.WriteLine(this.ToString());

@@ -38,30 +38,74 @@ namespace CSharpSixSamples
 
 
 
-            // Because we're using new features, in the CTP, we need to modify the .csproj file
-            // to set the LangVersion to be "experimental"
-            // This is done on  per configuration basis.
-            // I've only enabled it for Debug, so if you switch to Release you'll see errors
 
-
-            // #pragma changes
-            // String interpolation is "PLANNED"
 
             // Auto-property enhancements
             // Expression bodied members
             // using Static
             // Await in catch and finally blocks
             // Exception filters
-            // NameOf expressions
+            // NameOf expressions *
             // Null Propogation operator (AKA Null-conditional)
             // Element and Index Initializers
 
-            // string interpolation - PLANNED
+            // string interpolation * - Coming but not yet in the preview
+            // #pragma changes - Coming but not yet in the preview 
+
+
+
+            // * still subject to change
+
+
+            SetOutputHeading("Auto-Property enhancements");
+
+            var ap = new AutoPropertyInitializers("Matt");
+            Console.WriteLine(ap.Name);
+            Console.WriteLine(ap.AnotherProperty);
+
+
+            SetOutputHeading("Expression bodied members");
+
+            var ebm = new ExpressionBodyMembers(4, 5);
+            Console.WriteLine(ebm.Area);
+            Console.WriteLine(ebm.GrowAreaByPercentage(20));
+
+
+            SetOutputHeading("using Static");
+
+            // Look at code to see what's new here
+
+
+            SetOutputHeading("Await in catch and finally blocks");
+
+            // Look at code to see what's new here
+
+
+            SetOutputHeading("Exception filters");
+
+            // Look at code to see what's new here
+
+
+            SetOutputHeading("Null Propogation operator");
+
+            var nullProp = new NullConditionalOrNullPropagation();
+
+            nullProp.OldWay();
+            nullProp.NewWay();
+            nullProp.EvenBetterWay();
+            nullProp.AsSingleLine();
+            //nullProp.OnIndexersToo();
+
+
+            SetOutputHeading("Element Index Initializers");
+
+            // Look at code to see what's new here
+
 
             SetOutputHeading("'nameof' expressions");
-            
             var nameof = new NameOfExpressions();
             nameof.ShowWhatCanNowBeDone("something");
+
 
 
             Console.ReadKey(true);

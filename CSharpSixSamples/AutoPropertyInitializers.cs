@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSharpSixSamples
 {
@@ -11,11 +8,10 @@ namespace CSharpSixSamples
         public AutoPropertyInitializers(string name)
         {
             // Set getter only properties in the constructor
-            // Note. CTP doesn't yet support this
-            //this.Name = name;
+            this.Name = name;
 
-            // TODO: confirm - what is the value of AnotherProperty when the constructor starts and completes - break on next line to prove
-            //this.AnotherProperty = 6;
+            // this is set by the property but can be overwritten here
+            this.AnotherProperty = 7;
         }
 
         // Default values - All in one place, not via fields or a constructor
@@ -27,10 +23,10 @@ namespace CSharpSixSamples
         // Fields too!
         public Guid id = Guid.NewGuid();
 
-        // getter only auto-properties
-        // Note. CTP doesn't yet support this
-        //public string Name { get; }
+        // Not set here but an be set in the constructor
+        public string Name { get; }
 
-        //pubilc int AnotherProperty { get; } = 6
+        // Can be overwritten in the constructor;
+        public int AnotherProperty { get; } = 6;
     }
 }
